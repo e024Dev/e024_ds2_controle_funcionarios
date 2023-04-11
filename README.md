@@ -38,6 +38,10 @@ spring.datasource.username=aluno
 spring.datasource.password=segredo@123
 spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 
+# JPA
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+
 ```
 
 ### Mapeamento Objeto Relacional
@@ -110,5 +114,30 @@ public class DepartamentoService {
     //TODO: Criar método salvar
     //TODO: Criar método atualizar
     //TODO: Criar método apagar por id
+}
+```
+
+## Desafio
+
+Teste os métodos criados na camada de serviços.
+
+Na classe Main, implemente a interface CommandLineRunner com o método Run, conforme o exemplo abaixo para testar a classe de servicós.
+
+```java
+@SpringBootApplication
+public class Main implements CommandLineRunner{
+
+	@Autowired
+	private DepartamentoService service;
+
+	public static void main(String[] args) {
+		SpringApplication.run(Main.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		//TODO: Testar os métodos da classe DepartamentoService...
+	}
+
 }
 ```
