@@ -97,4 +97,18 @@ public interface DepartamentoRepository extends JpaRepository<Departamento, Inte
 
 ### Camada de Serviços
 
-Iremos criar a camada de serviços
+Iremos criar a camada de serviços, como a cama da de dados não deve conter regras de negócio, o acesso deverá ser realizado pela camada de serviços.
+
+Crie a classe `services/DeparpatemtoService`.
+
+```java
+@Service
+public class DepartamentoService {
+
+    //TODO: Criar método buscar todos os departamentos
+    //TODO: Criar método buscar por id
+    //TODO: Criar método salvar
+    //TODO: Criar método atualizar
+    //TODO: Criar método apagar por id
+}
+```
